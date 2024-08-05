@@ -2,7 +2,7 @@ import React from "react";
 
 class StatefulGreeting extends React.Component {
     render () {
-        return <h1>{this.props.greeting}</h1>
+        return <h1>{this.props.greeting} Hello {this.props.name}</h1>
     }
 }
 
