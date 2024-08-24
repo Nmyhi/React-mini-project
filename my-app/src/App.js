@@ -1,12 +1,12 @@
 import './App.css';
-import MethodsAsParent from './components/MethodsAsParent';
+import RenderingLists from './components/RenderingLists';
 
 
 
 function App() {
   return (
     <div className="App">
-      <MethodsAsParent/>
+      <RenderingLists/>
     </div>
   );
 }
