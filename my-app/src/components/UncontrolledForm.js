@@ -3,10 +3,17 @@ import React, { Component } from 'react'
 export class UncontrolledForm extends Component {
     constructor(props) {
       super(props)
+      this.inputName = React.createRef();
+      this.inputCategory = React.createRef();
+      this.inputComments = React.createRef();
+
     }
     
     handleSubmit = (event) => {
       event.preventDefault();
+      console.log(this.inputName.current.value);
+      console.log(this.inputCategory.current.value);
+      console.log(this.inputComments.current.value);
     }
   render() {
     return (
@@ -15,11 +22,11 @@ export class UncontrolledForm extends Component {
         <form onSubmit={this.handleSubmit}>
           <div>
             <label htmlFor="id-name">Your Name:</label>
-            <input id="id-name" name="name" type="text"></input>
+            <input id="id-name" name="name" type="text" ref={this.inputName} defaultValue="Anonymus"></input>
           </div>
           <div>
             <label htmlFor="id-category">Query category:</label>
-            <select id="id-categtory" name="category">
+            <select id="id-categtory" name="category" ref={this.inputCategory}>
               <option value="website">Website issue</option>
               <option value="order">Order issue</option>
               <option value="general">General enquiry</option>
@@ -27,7 +34,7 @@ export class UncontrolledForm extends Component {
           </div>
           <div>
             <label htmlFor="id-comments">Comments:</label>
-            <textarea id="id-comments" name="comments"/>
+            <textarea id="id-comments" name="comments" ref={this.inputComments}/>
           </div>
             <input type="submit" value="Submit"/>
         </form>
