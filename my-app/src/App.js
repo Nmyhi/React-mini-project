@@ -1,4 +1,5 @@
 import './App.css';
+import HTTPRequest from './components/HTTPRequest';
 import UncontrolledForm from './components/UncontrolledForm';
 
 
@@ -7,7 +8,7 @@ import UncontrolledForm from './components/UncontrolledForm';
 function App() {
   return (
     <div className="App">
-      <UncontrolledForm/>
+      <HTTPRequest/>
     </div>
   );
 }
